@@ -1,28 +1,30 @@
 package co.com.foodbank.contribution.dto;
 
 import java.util.Date;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class DetailContributionDTO {
 
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "Descriptions must be declared.")
+    @Size(min = 2, max = 32,
+            message = "Description must be between 2 and 32 characters long")
     private String description;
 
-    @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
 
     @NotNull
-    @NotBlank
+    @Size(min = 3, max = 12, message = "Code Bar may not be empty")
     private String codeBar;
 
     @NotNull
-    @NotBlank
+    @Pattern(regexp = "^[0-9]{4,4}$",
+            message = "Num of package must be numeric between 1-4 digits.")
     private String numOfPackage;
 
 
