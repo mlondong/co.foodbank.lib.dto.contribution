@@ -23,7 +23,7 @@ public class DetailContributionDTO {
     private String codeBar;
 
     @NotNull
-    @Pattern(regexp = "^[0-9]{4,4}$",
+    @Pattern(regexp = "^[0-9]{1,4}$",
             message = "Num of package must be numeric between 1-4 digits.")
     private String numOfPackage;
 
