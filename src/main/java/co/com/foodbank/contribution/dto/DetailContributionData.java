@@ -1,7 +1,6 @@
 package co.com.foodbank.contribution.dto;
 
 import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * @author mauricio.londono@gmail.com co.com.foodbank.contribution.dto
@@ -13,7 +12,7 @@ public class DetailContributionData implements IContribution {
     private String description;
     private Date date;
 
-    @JsonIgnore(value = true)
+    // @JsonIgnore(value = true)
     private IStateContribution state;
 
     private String codeBar;
