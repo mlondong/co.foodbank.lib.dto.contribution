@@ -3,15 +3,14 @@ package co.com.foodbank.contribution.dto;
 import java.util.Date;
 import co.com.foodbank.vehicule.dto.VolumeDTO;
 
+
 public class GeneralContributionData implements IContribution {
 
     private String id;
     private String description;
     private Date date;
 
-    // @JsonIgnore(value = true)
     private IStateContribution state;
-
 
     public VolumeDTO volume;
 

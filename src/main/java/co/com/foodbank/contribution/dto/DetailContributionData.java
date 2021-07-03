@@ -12,7 +12,6 @@ public class DetailContributionData implements IContribution {
     private String description;
     private Date date;
 
-    // @JsonIgnore(value = true)
     private IStateContribution state;
 
     private String codeBar;
