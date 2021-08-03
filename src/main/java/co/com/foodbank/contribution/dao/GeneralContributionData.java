@@ -1,12 +1,20 @@
-package co.com.foodbank.contribution.dto;
+package co.com.foodbank.contribution.dao;
 
+import java.io.Serializable;
 import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import co.com.foodbank.contribution.dto.IContribution;
 import co.com.foodbank.contribution.state.IStateContribution;
 import co.com.foodbank.vehicule.dto.VolumeDTO;
 
+@JsonAutoDetect(fieldVisibility = Visibility.DEFAULT)
+public class GeneralContributionData implements IContribution, Serializable {
 
-public class GeneralContributionData implements IContribution {
-
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
     private String id;
     private String description;
     private Date date;
@@ -21,6 +29,12 @@ public class GeneralContributionData implements IContribution {
      * Default constructor.
      */
     public GeneralContributionData() {}
+
+
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
 
 
