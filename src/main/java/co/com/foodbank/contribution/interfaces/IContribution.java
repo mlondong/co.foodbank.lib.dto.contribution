@@ -1,4 +1,4 @@
-package co.com.foodbank.contribution.dto;
+package co.com.foodbank.contribution.interfaces;
 
 import java.util.Date;
 import co.com.foodbank.contribution.state.IStateContribution;

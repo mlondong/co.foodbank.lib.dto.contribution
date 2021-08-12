@@ -1,12 +1,17 @@
 package co.com.foodbank.contribution.dto;
 
 import java.util.Date;
+import co.com.foodbank.contribution.interfaces.IContribution;
 import co.com.foodbank.contribution.state.IStateContribution;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author mauricio.londono@gmail.com co.com.foodbank.contribution.dto
  *         18/06/2021
  */
+@Data
+@NoArgsConstructor
 public class DetailContributionData implements IContribution {
 
     private String id;
@@ -17,42 +22,6 @@ public class DetailContributionData implements IContribution {
 
     private String codeBar;
     private Long numOfPackage;
-
-
-
-    public DetailContributionData() {}
-
-    public String getCodeBar() {
-        return codeBar;
-    }
-
-    public void setCodeBar(String codeBar) {
-        this.codeBar = codeBar;
-    }
-
-    public Long getNumOfPackage() {
-        return numOfPackage;
-    }
-
-    public void setNumOfPackage(Long numOfPackage) {
-        this.numOfPackage = numOfPackage;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public void setState(IStateContribution state) {
-        this.state = state;
-    }
 
 
     @Override
