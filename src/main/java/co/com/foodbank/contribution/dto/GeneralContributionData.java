@@ -4,11 +4,8 @@ import java.util.Date;
 import co.com.foodbank.contribution.interfaces.IContribution;
 import co.com.foodbank.contribution.state.IStateContribution;
 import co.com.foodbank.vehicule.dto.VolumeDTO;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
+
 public class GeneralContributionData implements IContribution {
 
     private String id;
@@ -20,6 +17,37 @@ public class GeneralContributionData implements IContribution {
     public VolumeDTO volume;
 
 
+
+    /**
+     * Default constructor.
+     */
+    public GeneralContributionData() {}
+
+
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setState(IStateContribution state) {
+        this.state = state;
+    }
+
+    public void setVolume(VolumeDTO volume) {
+        this.volume = volume;
+    }
+
+    public VolumeDTO getVolume() {
+        return volume;
+    }
 
     @Override
     public String getDescription() {
