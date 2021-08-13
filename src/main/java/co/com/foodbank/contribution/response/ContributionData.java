@@ -1,4 +1,4 @@
-package co.com.foodbank.contribution.dao;
+package co.com.foodbank.contribution.response;
 
 import java.util.Date;
 import co.com.foodbank.contribution.state.IStateContribution;
