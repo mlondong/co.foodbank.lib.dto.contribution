@@ -1,10 +1,10 @@
-package co.com.foodbank.contribution.response;
+package co.com.foodbank.contribution.dto.response;
 
 import java.io.Serializable;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import co.com.foodbank.contribution.interfaces.IContribution;
+import co.com.foodbank.contribution.dto.interfaces.IContribution;
 import co.com.foodbank.contribution.state.IStateContribution;
 
 /**
